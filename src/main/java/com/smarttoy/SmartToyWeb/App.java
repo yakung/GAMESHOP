@@ -13,43 +13,45 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class App {
-	private ToyShop toyshop = new ToyShop();
+	private GameShop gameshop = new GameShop();
 //	private Cart cart = new Cart();
-	
-    public static void main(String[] args) {    	
-        SpringApplication.run(App.class, args);
-    }
-    
-	@RequestMapping("/toyshop")    
-	public List<Toy> getAllToys() {
-	    return toyshop.getAllToys();
+
+	public static void main(String[] args) {
+		SpringApplication.run(App.class, args);
+
 	}
-	
-    @RequestMapping("/")
-    String Firstpage() {
-        return "THIS IS MY TOY SHOP !!";
-    }
-    @RequestMapping(value = "/toyshop/{id}")
-    Toy viewToy(@PathVariable int id) {
-        return toyshop.getById(id);
-    }
-    @RequestMapping(value = "/toyshop/{id}/buy")
-    List<Toy> buyToy(@PathVariable int id) {
-        return toyshop.buyToy(id);
-    }
-    
-    @RequestMapping(value = "/cart")
-    public List<Toy> viewCart() {
-        return toyshop.viewCart();
-    }
-    @RequestMapping(value = "/payment")
-    public String payCart() {
-    	toyshop.viewCart().clear();
-    	
-        return "THANK YOU FOR BUY ITEM";
-    }
-    
-    
-    
-       
+
+	@RequestMapping("/gameshop")
+	public List<Game> getAllToys() {
+		return gameshop.getAllToys();
+	}
+
+	@RequestMapping("/")
+	String Firstpage() {
+
+		return "THIS IS MY Game SHOP !!";
+	}
+
+	@RequestMapping(value = "/gameshop/{id}")
+	Game viewToy(@PathVariable int id) {
+		return gameshop.getById(id);
+	}
+
+	@RequestMapping(value = "/gameshop/{id}/buy")
+	List<Game> buyToy(@PathVariable int id) {
+		return gameshop.buyToy(id);
+	}
+
+	@RequestMapping(value = "/cart")
+	public List<Game> viewCart() {
+		return gameshop.viewCart();
+	}
+
+	@RequestMapping(value = "/payment")
+	public String payCart() {
+		gameshop.viewCart().clear();
+
+		return "THANK YOU FOR BUY ITEM";
+	}
+
 }

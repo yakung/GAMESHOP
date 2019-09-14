@@ -7,14 +7,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public abstract class Game {
+public class Game {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private String id;
+	public int getAmount() {
+		return amount;
+	}
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
 	private String name;
 	private int price;
 	private String desc;
 	private int amount;
-
+	
+	public Game() {
+	}
 	public String getId() {
 		return id;
 	}
@@ -47,8 +56,7 @@ public abstract class Game {
 		this.desc = desc;
 	}
 
-	public Game(String id, String name, int price, int amount, String desc) {
-		this.id = id;
+	public Game(String name, int price, int amount, String desc) {
 		this.name = name;
 		this.price = price;
 		this.amount = amount;

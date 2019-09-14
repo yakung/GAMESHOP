@@ -2,10 +2,10 @@ package com.smarttoy.SmartToyWeb;
 
 public class Nintendo extends Game{
 
-	public Nintendo(String id, String name, int price, int amount, String desc) {
-		super(id, name, price, amount, desc);
-		// TODO Auto-generated constructor stub
-	}
+//	public Nintendo(String id, String name, int price, int amount, String desc) {
+//		super(id, name, price, amount, desc);
+//		// TODO Auto-generated constructor stub
+//	}
 
 //	private int price;
 //	private int amount;

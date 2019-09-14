@@ -2,6 +2,7 @@ package com.smarttoy.SmartToyWeb;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class App {
+	
+	@Autowired
 	private GameShopService gameService = GameShopService.getInstance();
 
 	public static void main(String[] args) {
@@ -38,11 +41,11 @@ public class App {
 //		return gameshop.getAllToys();
 //	}
 //
-//	@RequestMapping("/")
-//	String Firstpage() {
-//
-//		return "THIS IS MY Game SHOP !!";
-//	}
+	@RequestMapping("/")
+	String Firstpage() {
+
+		return "THIS IS MY Game SHOP !!";
+	}
 //
 //	@RequestMapping(value = "/gameshop/{id}")
 //	Game viewToy(@PathVariable int id) {

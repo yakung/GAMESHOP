@@ -2,10 +2,10 @@ package com.smarttoy.SmartToyWeb;
 
 public class Sega extends Game {
 
-	public Sega(String id, String name, int price, int amount, String desc) {
-		super(id, name, price, amount, desc);
-		// TODO Auto-generated constructor stub
-	}
+//	public Sega(String id, String name, int price, int amount, String desc) {
+//		super(id, name, price, amount, desc);
+//		// TODO Auto-generated constructor stub
+//	}
 
 //	private int price;
 //	private int amount;
